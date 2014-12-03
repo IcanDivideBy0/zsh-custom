@@ -7,6 +7,7 @@ git_cmd=(
   'cherry-pick'
   'commit'
   'fetch'
+  'lola'
   'pull'
   'push'
   'rebase'
