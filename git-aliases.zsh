@@ -6,6 +6,7 @@ git_cmd=(
   'checkout'
   'cherry-pick'
   'commit'
+  'diff'
   'fetch'
   'log'
   'lola'
