@@ -5,6 +5,7 @@ git_cmd=(
   'branch'
   'checkout'
   'cherry-pick'
+  'clone'
   'commit'
   'diff'
   'fetch'
