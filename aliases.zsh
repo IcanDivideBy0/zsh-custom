@@ -11,6 +11,8 @@ function mcd() {
   mkdir -p "$1" && cd "$1";
 }
 
+alias mia-vpn='snx < ~/.snxpasswd'
+
 function pause()   { xprop _NET_WM_PID | awk '{print $3}' | xargs kill -STOP }
 function unpause() { xprop _NET_WM_PID | awk '{print $3}' | xargs kill -CONT }
 
