@@ -6,7 +6,7 @@ Personal zsh custom config directory
 install
 ==========
 
-zsh
+Oh My Zsh:
 ```sh
 wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 ```
