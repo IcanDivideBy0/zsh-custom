@@ -13,7 +13,7 @@ POWERLEVEL9K_MODE='awesome-fontconfig'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_context nvm dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs time)
 
-POWERLEVEL9K_CUSTOM_CONTEXT='echo -n "%{$fg[red]%}%n%{$reset_color%}@%{$fg_bold[blue]%}%m%{$reset_color%}"'
+POWERLEVEL9K_CUSTOM_CONTEXT='echo -n "%{$fg[red]%}%n%{$fg[white]%}@%{$fg_bold[blue]%}%m%{$fg_no_bold[white]%}"'
 POWERLEVEL9K_CUSTOM_CONTEXT_BACKGROUND='232'
 
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='232'
