@@ -8,4 +8,9 @@ function octosmstack() {
 }
 
 # Launch a single LeHuit server test
-alias octotest='mocha --require test/server/bootstrap.js --reporter=spec --watch $@'
+function octotest() {
+  mocha --require test/server/bootstrap.js --reporter=spec --watch $@
+
+  # Cursor is mangled by mocha, I don't know why...
+  tput init
+}
