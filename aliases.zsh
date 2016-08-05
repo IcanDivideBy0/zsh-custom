@@ -20,3 +20,6 @@ function pause()   { xprop _NET_WM_PID | awk '{print $3}' | xargs kill -STOP }
 function unpause() { xprop _NET_WM_PID | awk '{print $3}' | xargs kill -CONT }
 
 alias oh-my-zsh-config='subl ~/.oh-my-zsh/custom'
+
+# Adjust brightness of second monitor
+alias brightness-fix='xrandr --output DP1 --brightness $@'

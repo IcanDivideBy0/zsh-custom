@@ -8,9 +8,12 @@ function octosmstack() {
 }
 
 # Launch a single LeHuit server test
-function octotest() {
-  mocha --require test/server/bootstrap.js --reporter=spec --watch $@
+# function octotest() {
+#   mocha --require test/server/bootstrap.js --reporter=spec --watch $@
 
-  # Cursor is mangled by mocha, I don't know why...
-  tput init
-}
+#   # Cursor is mangled by mocha, I don't know why...
+#   tput init
+# }
+
+# mocha --watch is damn CPU intensive
+alias octotest="find {server,test} -name '*.js' | entr mocha --require test/server/bootstrap.js --reporter=spec \$@"
