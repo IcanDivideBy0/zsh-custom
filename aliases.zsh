@@ -19,7 +19,18 @@ alias mia-vpn='snx < ~/.snxpasswd'
 function pause()   { xprop _NET_WM_PID | awk '{print $3}' | xargs kill -STOP }
 function unpause() { xprop _NET_WM_PID | awk '{print $3}' | xargs kill -CONT }
 
+# Edit this config
 alias oh-my-zsh-config='subl ~/.oh-my-zsh/custom'
+
+# Daily expense report task
+alias ndf=$HOME/Dropbox/TabaskoLab/Frais/todo
 
 # Adjust brightness of second monitor
 alias brightness-fix='xrandr --output DP1 --brightness $@'
+
+# Automatically fix obvious eslint issues
+function autolint {
+  while sleep 1; do
+    find $@ -name '*.js' | entr -c -d -p ./node_modules/.bin/eslint --fix /_
+  done
+}
