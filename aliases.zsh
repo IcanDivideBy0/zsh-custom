@@ -14,23 +14,30 @@ function mcd() {
   mkdir -p "$1" && cd "$1";
 }
 
-alias mia-vpn='snx < ~/.snxpasswd'
+# => not working w/ this shitty VPN anymore
+# alias mia-vpn='snx < ~/.snxpasswd'
 
-function pause()   { xprop _NET_WM_PID | awk '{print $3}' | xargs kill -STOP }
-function unpause() { xprop _NET_WM_PID | awk '{print $3}' | xargs kill -CONT }
+# => this never was really useful... or even used at all
+# function pause()   { xprop _NET_WM_PID | awk '{print $3}' | xargs kill -STOP }
+# function unpause() { xprop _NET_WM_PID | awk '{print $3}' | xargs kill -CONT }
 
 # Edit this config
-alias oh-my-zsh-config='subl ~/.oh-my-zsh/custom'
+alias oh-my-zsh-config='atom ~/.oh-my-zsh/custom'
+
+# CURL w/ timing output
+alias tcurl='curl -w "@$HOME/.curl-timing-format" $@'
 
 # Daily expense report task
-alias ndf=$HOME/Dropbox/TabaskoLab/Frais/todo
+alias ndf=$HOME/Dropbox/TabaskoLab/01-FRAIS/todo
 
 # Adjust brightness of second monitor
-alias brightness-fix='xrandr --output DP1 --brightness $@'
+# => didn't encounter the issue since a long time
+# alias brightness-fix='xrandr --output DP1 --brightness $@'
 
 # Automatically fix obvious eslint issues
-function autolint {
-  while sleep 1; do
-    find $@ -name '*.js' | entr -c -d -p ./node_modules/.bin/eslint --fix /_
-  done
-}
+# => using prettier now
+# function autolint {
+#   while sleep 1; do
+#     find $@ -name '*.js' | grep -v 'node_modules' | entr -c -d -p ./node_modules/.bin/eslint --fix /_
+#   done
+# }
