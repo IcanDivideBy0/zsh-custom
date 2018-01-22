@@ -41,3 +41,8 @@ alias ndf=$HOME/Dropbox/TabaskoLab/01-FRAIS/todo
 #     find $@ -name '*.js' | grep -v 'node_modules' | entr -c -d -p ./node_modules/.bin/eslint --fix /_
 #   done
 # }
+
+# Terminal CSV viewer
+function csvview() {
+  column -s, -t < "$1" 2>/dev/null | less -
+}
