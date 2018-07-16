@@ -30,6 +30,9 @@ alias tcurl='curl -w "@$HOME/.curl-timing-format" $@'
 # Daily expense report task
 alias ndf=$HOME/Dropbox/TabaskoLab/01-FRAIS/todo
 
+# Prevent slack to change status to away
+alias slack-awake="while [[ -n 1 ]]; do xte 'key Shift_L' 'sleep 60'; done"
+
 # Adjust brightness of second monitor
 # => didn't encounter the issue since a long time
 # alias brightness-fix='xrandr --output DP1 --brightness $@'
@@ -44,5 +47,5 @@ alias ndf=$HOME/Dropbox/TabaskoLab/01-FRAIS/todo
 
 # Terminal CSV viewer
 function csvview() {
-  column -s, -t < "$1" 2>/dev/null | less -
+  csvtool readable "$1" | less -
 }
