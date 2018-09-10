@@ -33,6 +33,9 @@ alias ndf=$HOME/Dropbox/TabaskoLab/01-FRAIS/todo
 # Prevent slack to change status to away
 alias slack-awake="while [[ -n 1 ]]; do xte 'key Shift_L' 'sleep 60'; done"
 
+# Unreal Engine
+alias ue4-editor='optirun $HOME/Workspace/UnrealEngine/Engine/Binaries/Linux/UE4Editor'
+
 # Adjust brightness of second monitor
 # => didn't encounter the issue since a long time
 # alias brightness-fix='xrandr --output DP1 --brightness $@'
